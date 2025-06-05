@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>First Real Project</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div class="project">
+        <!-- head of project -->
+        <div class="head">
+            <h2>cruds</h2>
+            <p>product management system</p>
+        </div>
+
+        <!-- body of project -->
+        <div class="inputs">
+            <input type="text" name="title" id="title" placeholder="Title" />
+            <div class="price">
+                <input type="number" name="price" id="price" placeholder="Price" />
+                <input type="number" name="taxes" id="taxes" placeholder="Taxes" />
+                <input type="number" name="adds" id="adds" placeholder="Adds" />
+                <input type="number" name="discount" id="discount" placeholder="Discount" />
+                <small id="total">0</small>
+            </div>
+            <input type="number" name="count" id="count" placeholder="Count" />
+            <input type="text" name="category" id="category" placeholder="category" />
+            <button id="submit">Create</button>
+        </div>
+
+        <!-- footer of project -->
+        <div class="outputs">
+            <div class="search">
+                <input type="text" id="search" placeholder="Search" />
+                <div class="btnsearch">
+                    <button onclick="getSearchMood(this.id)" id="searchTitle">Search By Title</button>
+                    <button onclick="getSearchMood(this.id)" id="searchCategory">Search By Category</button>
+                </div>
+            </div>
+
+            <div id="deleteALL"></div>
+
+            <!-- table -->
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>title</th>
+                    <th>price</th>
+                    <th>taxes</th>
+                    <th>ads</th>
+                    <th>discount</th>
+                    <th>total</th>
+                    <th>Category</th>
+                    <th colspan="2">action</th>
+                </tr>
+
+                <tbody id="tbody"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
